@@ -68,6 +68,9 @@ section,
 	-webkit-line-clamp: 2;
 	overflow: hidden;
 }
+p + p{
+	margin-top: 1rem;
+}
 table{
 	width: 100%;
 }
@@ -170,10 +173,11 @@ footer .copyright{
 	min-height: 700px;
 }
 .top02 .txt{
-	position: absolute;
-	top: 50%;
-	right: 10%;
-	transform: translateY(-50%);
+	height: 100vh;
+	min-height: 700px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .top02 .txt h2,
 .top02 .txt p{

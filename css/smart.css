@@ -52,6 +52,9 @@ section,
 .inertia{
 	-webkit-overflow-scrolling: touch;
 }
+p + p{
+	margin-top: 1rem;
+}
 table{
 	width: 100%;
 }
@@ -61,7 +64,7 @@ table{
 .fadein{
 	opacity: 0;
 	transform: translateY(100px);
-	transition: all .7s;
+	transition: all 1s;
 }
 .ttl{
 	display: inline-block;
@@ -95,7 +98,7 @@ table{
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
-.menu_open{
+/* .menu_open{
 	width: 3rem;
 	position: relative;
 }
@@ -113,7 +116,7 @@ table{
 .menu_open span:nth-of-type(3){transform:translate(-50%,-50%) translateY(-5px);}
 .menu_open.active span:nth-of-type(1){transform:translate(-50%,-50%) rotate(45deg);}
 .menu_open.active span:nth-of-type(2){opacity: 0;}
-.menu_open.active span:nth-of-type(3){transform:translate(-50%,-50%) rotate(-45deg);}
+.menu_open.active span:nth-of-type(3){transform:translate(-50%,-50%) rotate(-45deg);} */
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ フッター ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
@@ -142,7 +145,7 @@ footer .copyright{
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .top01{
 	background: url(../images/mv.png) center center/cover no-repeat;
-	height: 50vh;
+	height: 60vh;
 	min-height: 300px;
 }
 .top01 .logo{
@@ -158,14 +161,15 @@ footer .copyright{
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .top02{
 	background: url(../images/top01_01.png) center center/cover no-repeat;
-	height: 50vh;
+	height: 60vh;
 	min-height: 300px;
 }
 .top02 .txt{
-	position: absolute;
-	top: 50%;
-	right: 5%;
-	transform: translateY(-50%);
+	height: 60vh;
+	min-height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .top02 .txt h2,
 .top02 .txt p{
