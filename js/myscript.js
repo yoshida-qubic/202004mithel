@@ -18,10 +18,26 @@ const tabletwidth = 1025;
 
 $(function () {
 
-// JQueryの範囲
+	// JQueryの範囲
 
-
-
-
+	// スクロール時にフェードイン
+	$(window).on('scroll load', function(){
+		$('.fadein').each(function(){
+			let targetElement = $(this).offset().top;
+			let scroll = $(window).scrollTop();
+			let windowHeight = $(window).height();
+			if (w > spwidth) {
+				if (scroll > targetElement - windowHeight + 200) {
+					$(this).css('opacity', '1');
+					$(this).css('transform', 'translateY(0)');
+				}
+			} else {
+				if (scroll > targetElement - windowHeight - 200) {
+					$(this).css('opacity', '1');
+					$(this).css('transform', 'translateY(0)');
+				}
+			}
+		});
+	});
 
 });

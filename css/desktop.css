@@ -6,16 +6,13 @@
 /* @media screen and (min-width:769px) and ( max-width:1025px) {} */
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ベース設定 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 html{
-	color: ;
-	font-size:;
-	/*font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;*/
-	/*font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;*/
-	/*font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;*/
-	/*font-family: '小塚ゴシック Pro','Kozuka Gothic Pro',sans-serif;*/
-	line-height: ;
+	color: #515251;
+	font-size: 16px;
+	font-family: 'Noto Sans JP',"ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+	line-height: 1.7;
 }
 a{
-	color: ;
+	color: #fff;
 	display: block;
 }
 #wrapper{
@@ -33,13 +30,14 @@ section,
 	margin: 0 auto;
 }
 @media screen and (min-width:1540px) {
-	.container{max-width: 1480px;}
+	.container{max-width: 1000px;}
 }
 @media screen and (min-width:1280px) and ( max-width:1539px) {
-	.container{max-width: 1280px;}
+	.container{max-width: 1000px;}
 }
 @media screen and (min-width:768px) and ( max-width:1279px) {
 	.container{max-width: none;}
+	html{font-size: 15px;}
 }
 .is_sp{display: none;}
 .is_tab{display: none;}
@@ -70,21 +68,341 @@ section,
 	-webkit-line-clamp: 2;
 	overflow: hidden;
 }
+table{
+	width: 100%;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ベース設定 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
- 
+.txtL{
+	text-align: left;
+}
+.fadein{
+	opacity: 0;
+	transform: translateY(100px);
+	transition: all 1s;
+}
+.ttl{
+	display: inline-block;
+	position: relative;
+	font-size: 2.8rem;
+	font-weight: 600;
+	color: #000;
+	margin-bottom: 4rem;
+}
+.ttl::before{
+	position: absolute;
+	content: '-';
+	top: 50%;
+	left: -3rem;
+	transform: translateY(-50%);
+}
+.ttl::after{
+	position: absolute;
+	content: '-';
+	top: 50%;
+	right: -3rem;
+	transform: translateY(-50%);
+}
+.reservation{
+	margin-top: 5rem;
+	text-align: center;
+}
+.reservation .btn{
+	transition: all 1s;
+}
+.reservation .btn a{
+	transition: 0.3s;
+	display: inline-block;
+}
+.reservation .btn a:hover{
+	opacity: 0.7;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
- 
+
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ フッター ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
- 
+footer{
+	margin-top: 6rem;
+	padding: 3rem 0;
+	background: #7da9d7;
+	text-align: center;
+}
+footer .img{
+	display: inline-block;
+	margin-bottom: 2rem;
+	max-width: 2.2rem;
+	width: 100%;
+}
+footer .logo{
+	margin: 0 auto 1.5rem;
+	max-width: 15rem;
+	width: 100%;
+}
+footer .copyright{
+	color: #fff;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ フッター ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
-/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
- 
-/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top01{
+	background: url(../images/mv.png) center center/cover no-repeat;
+	height: 100vh;
+	min-height: 700px;
+}
+.top01 .logo{
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translateY(-50%);
+	max-width: 450px;
+	width: 40%;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top02{
+	background: url(../images/top01_01.png) 35% center/cover no-repeat;
+	height: 100vh;
+	min-height: 700px;
+}
+.top02 .txt{
+	position: absolute;
+	top: 50%;
+	right: 10%;
+	transform: translateY(-50%);
+}
+.top02 .txt h2,
+.top02 .txt p{
+	color: #5e5e5e;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-align: right;
+	text-shadow: 0 0 1px #fff,
+			0 0 2px #fff,
+			0 0 3px #fff,
+			0 0 4px #fff,
+			0 0 5px #fff,
+			0 0 6px #fff,
+			0 0 7px #fff,
+			0 0 8px #fff,
+			0 0 9px #fff,
+			0 0 10px #fff;
+}
+.top02 .txt h2{
+	color: #5e5e5e;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+.top02 .txt p{
+	font-size: 1.1rem;
+	line-height: 2;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ03 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top03{
+	padding: 4rem 0;
+	text-align: center;
+}
+.top03 hr{
+	border: solid 3px #7da9d7;
+}
+.top03 .box{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 3.5rem 0;
+}
+.top03 .box .img_box{
+	width: 30%;
+	padding-right: 3rem;
+}
+.top03 .box .txt{
+	width: 70%;
+	text-align: left;
+}
+.top03 .box .txt h3{
+	font-size: 2rem;
+	font-weight: normal;
+	color: #7da9d7;
+	margin-bottom: 1rem;
+}
+.top03 .box .txt p{
+	font-size: 1.6rem;
+	margin-top: 1rem;
+}
+.top03 .box .txt p.large_txt{
+	font-size: 2.4rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ03 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ04 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.price_box h3{
+	font-size: 3rem;
+	line-height: 1;
+	color: #000;
+	margin-bottom: 2.5rem;
+}
+.price_box h3 span{
+	font-size: 1.3rem;
+}
+.price_box th{
+	color: #fff;
+	background: #7da9d7;
+	font-weight: normal;
+	padding: 0.5rem 0.25rem;
+}
+.price_box td{
+	background: #fff;
+	border-bottom: solid 3px #7da9d7;
+	padding: 1.5rem 0.25rem;
+}
+.price_box .blank{
+	width: 4%;
+	border-bottom: none;
+}
+.price_box tbody tr:last-of-type td:last-of-type{
+	border-bottom: none;
+}
+.price_box td.plan{
+	font-size: 1.4rem;
+	color: #7da9d7;
+	text-align: left;
+	width: 19%;
+}
+.price_box td.time{
+	font-size: 1.4rem;
+	line-height: 1;
+	text-align: left;
+	width: 20.5%;
+}
+.price_box td.time span{
+	font-size: 0.8rem;
+}
+.price_box td.time span.large_txt{
+	font-size: 0.9rem;
+}
+.price_box td.minute{
+	font-size: 1.4rem;
+	font-weight: bold;
+	width: 12.5%;
+}
+.price_box td.minute span{
+	font-size: 0.9rem;
+}
+.price_box td.price{
+	font-size: 1.4rem;
+	font-weight: bold;
+	width: 23%;
+}
+.price_box td.price span{
+	font-size: 1rem;
+}
+.price_box td.treatment{
+	font-size: 1rem;
+	width: 17%;
+}
+.price_box td.notice{
+	padding: 0 0 1.5rem;
+}
+.price_box td.bb{
+	border-bottom: none;
+}
+.top04{
+	padding: 4rem 0;
+	text-align: center;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ04 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ05 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top05{
+	padding: 2rem 0 4rem;
+	text-align: center;
+}
+.top05 td{
+	background: #dfedfc;
+}
+.top05 td.plan{
+	width: 65%;
+}
+.top05 td.minute{
+	width: 6%;
+}
+.top05 td.price{
+	width: 12%;
+}
+.top05 td.treatment{
+	width: 9%;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ05 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ06 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top06{
+	padding: 4rem 0 0;
+	text-align: center;
+}
+.top06 .box{
+	width: 90%;
+	margin: 0 auto;
+	color: #000;
+}
+.top06 .box .item{
+	border: solid 4px #464646;
+	background: #dfedfc;
+	height: 18rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.top06 .box .item p{
+	font-size: 3rem;
+	line-height: 1;
+	font-weight: bold;
+}
+.top06 .box .item p span{
+	font-size: 5.2rem;
+}
+.top06 .box .copy{
+	margin: 2.5rem 0;
+}
+.top06 .box .copy p{
+	font-size: 2.2rem;
+}
+.top06 .box .copy p span{
+	font-size: 1.2rem;
+}
+.top06 .box .flexbox{
+	display: flex;
+	justify-content: space-between;
+}
+.top06 .box .flexbox .item{
+	max-width: 30rem;
+	width: 48%;
+	height: 22rem;
+}
+.top06 .box .flexbox .item p{
+	font-size: 2rem;
+	line-height: 1;
+	font-weight: bold;
+}
+.top06 .box .flexbox .item p .small_txt{
+	font-size: 1rem;
+	line-height: 1;
+	font-weight: bold;
+}
+.top06 .box .flexbox .item p .large_txt{
+	font-size: 4rem;
+	line-height: 1;
+	font-weight: bold;
+}
+.top06 .box .flexbox .item .img{
+	margin: 3rem 0;
+	max-width: 2.2rem;
+	width: 100%;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ06 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
