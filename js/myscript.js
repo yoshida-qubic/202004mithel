@@ -27,7 +27,7 @@ $(function () {
 			let scroll = $(window).scrollTop();
 			let windowHeight = $(window).height();
 			if (w > spwidth) {
-				if (scroll > targetElement - windowHeight + 200) {
+				if (scroll > targetElement - windowHeight) {
 					$(this).css('opacity', '1');
 					$(this).css('transform', 'translateY(0)');
 				}
